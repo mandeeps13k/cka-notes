@@ -17,8 +17,11 @@ kubectl delete pod pod-name\
 kubectl delete -f rc-definition.yaml
 ## replicas/scale
 kubectl get replicaset\
+kubectl get rs\
 kubectl describe replicaset myapp-replicaset\
 kubectl replace -f replicaset-definition.yaml\
 kubectl scale --replicas=6 -f replicaset-definition.yaml\
+kubectl scale replicaset new-replica-set --replicas=5\
 kubectl delete replicaset myapp-replicaset
+
 
