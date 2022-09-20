@@ -23,5 +23,11 @@ kubectl replace -f replicaset-definition.yaml\
 kubectl scale --replicas=6 -f replicaset-definition.yaml\
 kubectl scale replicaset new-replica-set --replicas=5\
 kubectl delete replicaset myapp-replicaset
+## Deployments
+kubectl create -f deployment-definition.yaml\
+kubectl get deployments\
+kubectl delete deployment myapp-deployment\
+kubectl describe deployments myapp-deployment-1\
+kubectl get all
 
 
