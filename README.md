@@ -30,6 +30,7 @@ kubectl delete deployment myapp-deployment\
 kubectl describe deployments myapp-deployment-1\
 kubectl get all
 ## Dry-Run
-kubectl run nginx --image=nginx --labels="app=myapp" --dry-run=client -o yaml > nginx-app.yaml
+kubectl run nginx --image=nginx --labels="app=myapp" --dry-run=client -o yaml > nginx-app.yaml\
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
 
 
