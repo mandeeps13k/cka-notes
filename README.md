@@ -50,4 +50,7 @@ kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=cl
 kubectl run redis --image=redis:alpine --dry-run=client -o yaml > redis-pod.yaml\
 kubectl expose pod redis --port=6379 --name=redis-service
 
+## Create Pod and expose on a Port
+kubectl run custom-nginx --image=nginx --port=8080
+
 
