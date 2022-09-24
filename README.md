@@ -55,7 +55,9 @@ kubectl run custom-nginx --image=nginx --port=8080\
 kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns\
 
 ## Labels , Selectors
-kubectl get pods --selector env=dev
+kubectl get pods --selector env=dev\
+kubectl get pods --selector bu=finance --no-headers\
+kubectl get all --selector env=prod
 
 
 
