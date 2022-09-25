@@ -60,7 +60,7 @@ kubectl get pods --selector bu=finance --no-headers\
 kubectl get all --selector env=prod\
 kubectl get pod --selector env=prod,bu=finance,tier=frontend
 ## Taints, Tolerations
-kubectl taint nodes node1 app=blue:NoSchedule
+kubectl taint nodes node1 app=blue:NoSchedule\
 kubectl describe nodes controlplane | grep Taint
 
 
