@@ -63,6 +63,8 @@ kubectl get pod --selector env=prod,bu=finance,tier=frontend
 kubectl taint nodes node1 app=blue:NoSchedule\
 kubectl describe nodes controlplane | grep Taint\
 kubectl taint nodes node1 app=blue:NoSchedule- (to remove a taint)
+## Label Node
+kubectl label nodes node01 size=Large
 
 
 
