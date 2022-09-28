@@ -65,7 +65,9 @@ kubectl describe nodes controlplane | grep Taint\
 kubectl taint nodes node1 app=blue:NoSchedule- (to remove a taint)
 ## Label Node
 kubectl label nodes node01 size=Large\
-kubectl label node node01 color=blue
+kubectl label node node01 color=blue\
+## Static Pods
+kubectl run --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml\
 
 
 
