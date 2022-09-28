@@ -70,8 +70,10 @@ kubectl label node node01 color=blue\
 kubectl run --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml\
 kubelet path - /etc/kubernetes/manifests ; /var/lib/kubelet/config.yaml\
 kubectl create configmap -n kube-system my-scheduler-config --from-file=/root/my-scheduler-config.yaml 
-## Logs
-kubectl logs -f pod-name container-name
+## Monitoring & Logs
+kubectl logs -f pod-name container-name\
+kubectl top pod\
+kubectl top node
 
 
 
