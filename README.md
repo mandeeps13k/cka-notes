@@ -68,7 +68,8 @@ kubectl label nodes node01 size=Large\
 kubectl label node node01 color=blue\
 ## Static Pods - Static Pod config files are placed in /etc/kubernetes/manifests ; kubernetes controlplane components are deployed as static pods
 kubectl run --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml\
-kubelet path - /etc/kubernetes/manifests ; /var/lib/kubelet/config.yaml 
+kubelet path - /etc/kubernetes/manifests ; /var/lib/kubelet/config.yaml\
+kubectl create configmap -n kube-system my-scheduler-config --from-file=/root/my-scheduler-config.yaml 
 
 
 
