@@ -77,7 +77,7 @@ kubectl top node\
 ## Rollout & Rollback
 kubectl rollout status deployment/myapp-deployment\
 kubectl rollout history deployment/myapp-deployment\
-kubectl rollout undo deployment/myapp-deployment
+RollBack -- kubectl rollout undo deployment/myapp-deployment
 
 
 
