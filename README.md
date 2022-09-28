@@ -78,6 +78,9 @@ kubectl top node\
 kubectl rollout status deployment/myapp-deployment\
 kubectl rollout history deployment/myapp-deployment\
 kubectl rollout undo deployment/myapp-deployment (RollBack)
+## Commands & Arguments
+Entrypoint (in Dockerfile) -> Command (in Pod YAML) ; \
+CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint 
 
 
 
