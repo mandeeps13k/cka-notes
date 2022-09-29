@@ -82,7 +82,7 @@ kubectl rollout undo deployment/myapp-deployment (RollBack)
 Entrypoint (in Dockerfile) -> Command (in Pod YAML) ; \
 CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint 
 ## Secrets and ConfigMaps
-kubectl create secret generic app-secret --from-literal=<key>=<value>
+kubectl create secret generic app-secret --from-literal=key=value
 
 
 
