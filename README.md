@@ -83,6 +83,12 @@ Entrypoint (in Dockerfile) -> Command (in Pod YAML) ; \
 CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint \
 kubectl create secret generic app-secret --from-literal=key=value \
 kubectl exec shell-demo -- ps aux
+## Cluster Maintainence
+kubectl get all -o wide \
+kubectl cordon node01 [Marking cordon will not allow to schedule new Pods on this node, existing pods will not be affected] \ 
+kubectl drain node01 
+
+
 
 
 
