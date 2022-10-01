@@ -83,8 +83,6 @@ Entrypoint (in Dockerfile) -> Command (in Pod YAML) ; \
 CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint \
 kubectl create secret generic app-secret --from-literal=key=value \
 kubectl exec shell-demo -- ps aux \ 
-kubectl exec shell-demo -- cat /proc/1/mounts \
-kubectl exec pod-name -- /bin/bash
 
 
 
