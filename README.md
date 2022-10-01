@@ -78,10 +78,9 @@ kubectl top node\
 kubectl rollout status deployment/myapp-deployment\
 kubectl rollout history deployment/myapp-deployment\
 kubectl rollout undo deployment/myapp-deployment (RollBack)
-## Commands & Arguments
+## Commands & Arguments , Secrets and ConfigMaps
 Entrypoint (in Dockerfile) -> Command (in Pod YAML) ; \
-CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint 
-## Secrets and ConfigMaps
+CMD (in Dockerfile) -> args (in Pod YAML); CMD Gets appended to Entrypoint \
 kubectl create secret generic app-secret --from-literal=key=value \
 kubectl exec shell-demo -- ps aux \ 
 kubectl exec shell-demo -- ls / \
