@@ -85,7 +85,7 @@ kubectl create secret generic app-secret --from-literal=key=value \
 kubectl exec shell-demo -- ps aux
 ## Cluster Maintainence
 kubectl get all -o wide \
-kubectl cordon node01\ 
+kubectl cordon node01 \
 kubectl drain node01 
 
 
