@@ -102,7 +102,10 @@ snapshot restore /opt/snapshot-pre-boot.db \
 To restore backup, update volumeMounts in /etc/kubernetes/manifests/etcd.yaml ; /var/lib/etcd -> /var/lib/etcd-from-backup \
 Always check --data-dir to verify etcd data directory \
 etcd-server ~ ➜  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/etcd/pki/ca.pem --cert=/etc/etcd/pki/etcd.pem --key=/etc/etcd/pki/etcd-key.pem snapshot restore /root/cluster2.db --data-dir /var/lib/etcd-data-new \
-etcd service config -> vi /etc/systemd/system/etcd.service 
+etcd service config -> vi /etc/systemd/system/etcd.service \
+etcd-server ~ ➜  systemctl daemon-reload \
+
+etcd-server ~ ➜  systemctl restart etcd
 
 
 
