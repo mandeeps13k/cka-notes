@@ -87,8 +87,11 @@ kubectl exec shell-demo -- ps aux
 kubectl get all -o wide \
 kubectl cordon node01 \
 kubectl drain node01 
-## BackUp
-kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml
+## BackUp , ETCD
+kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml \
+etcdctl snapshot save snapshot.db --cacert --cert --endpoint --key 
+
+
 
 
 
