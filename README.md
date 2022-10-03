@@ -89,7 +89,12 @@ kubectl cordon node01 \
 kubectl drain node01 
 ## BackUp , ETCD
 kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml \
-etcdctl snapshot save snapshot.db --cacert --cert --endpoint --key 
+etcdctl snapshot save snapshot.db --cacert --cert --endpoint --key \
+ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 \
+> --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+> --cert=/etc/kubernetes/pki/etcd/server.crt \
+> --key=/etc/kubernetes/pki/etcd/server.key \
+> snapshot save /opt/snapshot-pre-boot.db 
 
 
 
