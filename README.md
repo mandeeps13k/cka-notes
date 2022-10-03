@@ -87,6 +87,8 @@ kubectl exec shell-demo -- ps aux
 kubectl get all -o wide \
 kubectl cordon node01 \
 kubectl drain node01 
+## BackUp
+kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml
 
 
 
