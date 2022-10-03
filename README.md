@@ -99,7 +99,9 @@ snapshot save /opt/snapshot-pre-boot.db \
 ETCDCTL_API=3 etcdctl  --data-dir /var/lib/etcd-from-backup \
 snapshot restore /opt/snapshot-pre-boot.db \
 
-To restore backup, update volumeMounts in /etc/kubernetes/manifests/etcd.yaml ; /var/lib/etcd -> /var/lib/etcd-from-backup 
+To restore backup, update volumeMounts in /etc/kubernetes/manifests/etcd.yaml ; /var/lib/etcd -> /var/lib/etcd-from-backup \
+Always check --data-dir to verify etcd data directory 
+
 
 
 
