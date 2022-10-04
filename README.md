@@ -108,7 +108,8 @@ etcd-server ~ ➜  systemctl restart etcd
 ## Certificates
 kubectl get csr \
 kubectl certificate approve NAME \
-kubectl certificate deny NAME
+kubectl certificate deny NAME \
+kubectl delete csr NAME
 
 
 
