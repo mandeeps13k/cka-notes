@@ -105,6 +105,10 @@ etcd-server ~ ➜  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --ca
 etcd service config -> vi /etc/systemd/system/etcd.service \
 etcd-server ~ ➜  systemctl daemon-reload \
 etcd-server ~ ➜  systemctl restart etcd
+## Certificates
+kubectl get csr \
+kubectl certificate approve NAME \
+kubectl certificate deny NAME
 
 
 
