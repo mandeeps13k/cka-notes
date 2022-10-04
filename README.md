@@ -110,6 +110,13 @@ kubectl get csr \
 kubectl certificate approve NAME \
 kubectl certificate deny NAME \
 kubectl delete csr NAME
+## Config
+kubectl config view --kubeconfig my-kube-config \
+kubectl config get-clusters --kubeconfig /root/my-kube-config \
+kubectl config get-contexts --kubeconfig /root/my-kube-config \
+kubectl config use-context --kubeconfig=/root/my-kube-config research \
+kubectl config view --kubeconfig=/root/my-kube-config \
+kubectl config --kubeconfig=/root/my-kube-config current-context 
 
 
 
