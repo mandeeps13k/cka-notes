@@ -128,7 +128,7 @@ CNI Plugin configured on kubernetes cluster -> /etc/cni/net.d/ \
 For interface -> ip link ; ip addr; ip route (execute on node )  ; For ip -> also check kubectl logs pod \
 k get nodes -o wide ; ipcalc -b 10.51.11.3/24 \
 Services IP Defined in /etc/kubernetes/manifests/kube-apiserver.yaml (--service-cluster-ip-range=10.96.0.0/12) \
-kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system 
+kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-proxy runs as daemonsets
 
 
 
