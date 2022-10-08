@@ -125,7 +125,8 @@ kubectl get pods --as dev-user
 Check kubernetes network plugin -> ps -aux | grep kubelet | grep network \
 CNI Plugin Path -> ls /opt/cni/bin \
 CNI Plugin configured on kubernetes cluster -> /etc/cni/net.d/ \
-For interface -> ip link ; ip addr; ip route (execute on node )  ; For ip -> also check kubectl logs pod 
+For interface -> ip link ; ip addr; ip route (execute on node )  ; For ip -> also check kubectl logs pod \
+k get nodes -o wide ; ipcalc -b 10.51.11.3/24 
 
 
 
