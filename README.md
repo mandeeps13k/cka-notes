@@ -129,6 +129,8 @@ For interface -> ip link ; ip addr; ip route (execute on node )  ; For ip -> als
 k get nodes -o wide ; ipcalc -b 10.51.11.3/24 \
 Services IP Defined in /etc/kubernetes/manifests/kube-apiserver.yaml (--service-cluster-ip-range=10.96.0.0/12) \
 kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-proxy runs as daemonsets
+## Troubleshooting
+kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml 
 
 
 
