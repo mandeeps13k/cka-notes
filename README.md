@@ -171,6 +171,11 @@ For other errors related to file or Directory Not found , also check volume Moun
 check journalctl | grep apiserver \
 cat /var/log/syslog | grep kube-apiserver ;
 
+## Ingress
+
+For Ingress creation and related Issues, always check Ingress Controller (service) for ports config \
+k create ingress --help ;
+
 
 
 
