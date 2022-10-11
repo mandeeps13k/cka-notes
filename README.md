@@ -144,7 +144,7 @@ check /var/lib/kube-proxy/kubeconfig.conf for kube-proxy config ;
 
 Control-Plane Failure -> \
 check running pods in -n kube-system namespace ; \
-check kube-scheduler static pod config in /etc/kubernetes/manifests/kube-scheduler.yaml \
+check kube-scheduler static pod config in /etc/kubernetes/manifests/kube-scheduler.yaml 
 
 Kube-controller-manager -> \
 check running static pods in -n kube-system namespace ; \
