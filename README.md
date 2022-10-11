@@ -143,7 +143,8 @@ kubelet config on nodes -> check kubelet pod or check kubelet service on node ->
 vi /etc/kubernetes/kubelet.conf \
 journalctl -u kubelet \
 journalctl -u kubelet | grep failed \
-journalctl -u kubelet | grep error
+journalctl -u kubelet | grep error \
+kubelet logs: /var/log/syslog or journalctl
 
 kube-proxy -> \
 kube-proxy config as daemon set ; kubectl get ds -n kube-system; kube-proxy run kube-proxyconfig-map ; \
