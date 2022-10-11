@@ -134,7 +134,9 @@ kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-pro
 ## Network Policies
 
 The namespaceSelector from NPs works with Namespace labels ; \
-Use nameSpaceSelector (also as kubernetes used Automatic Labelling , The Kubernetes control plane sets an immutable label kubernetes.io/metadata.name on all namespaces)
+Use nameSpaceSelector (also as kubernetes used Automatic Labelling , The Kubernetes control plane sets an immutable label kubernetes.io/metadata.name on all namespaces) \
+
+k get ns --show-labels
 
 ## Troubleshooting
 
