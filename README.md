@@ -130,8 +130,12 @@ k get nodes -o wide ; ipcalc -b 10.51.11.3/24 \
 Services IP Defined in /etc/kubernetes/manifests/kube-apiserver.yaml (--service-cluster-ip-range=10.96.0.0/12) \
 kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-proxy runs as daemonsets
 ## Troubleshooting
+
+Kubectl Broken -> \
+check kube-apiserver Pod logs -> /var/log/pods/kube-system_kube-apiserver-controlplane_a94588ab9b1141fe60c1fb951b60579a/kube-apiserver 
+
 Kubelet -> \
-kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml \
+kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml
 vi /etc/kubernetes/kubelet.conf \
 journalctl -u kubelet \
 journalctl -u kubelet | grep failed \
