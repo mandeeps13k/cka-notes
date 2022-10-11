@@ -136,11 +136,12 @@ check kube-apiserver Pod logs -> /var/log/pods/kube-system_kube-apiserver-contro
 check running pods -> crictl ps ; \
 crictl logs container-id ; \
 or docker ps ; docker logs ; (when docker is configured)
-for kube-apiserver -> logs -> also check -> journalctl | grep apiserver ; tail -f /var/log/syslog | grep apiserver ; /var/log/pods ; crictl logs
+for kube-apiserver -> logs -> also check -> journalctl | grep apiserver ; \
+tail -f /var/log/syslog | grep apiserver ; /var/log/pods ; crictl logs
 
 
 Kubelet -> \
-kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml
+kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml \
 vi /etc/kubernetes/kubelet.conf \
 journalctl -u kubelet \
 journalctl -u kubelet | grep failed \
