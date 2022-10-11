@@ -138,8 +138,9 @@ journalctl -u kubelet | grep failed \
 journalctl -u kubelet | grep error
 
 kube-proxy -> \
-kube-proxy config as daemon set ; kubectl get ds -n kube-system; kube-proxy run kube-proxyconfig-map ; check kubectl get cm -n kube-system ; kube-proxy runs in kube-system ;  \
-check /var/lib/kube-proxy/kubeconfig.conf for kube-proxy config ; check 
+kube-proxy config as daemon set ; kubectl get ds -n kube-system; kube-proxy run kube-proxyconfig-map ; \
+check kubectl get cm -n kube-system ; kube-proxy runs in kube-system -> check kubectl get ds -n kube-system ;  \
+check /var/lib/kube-proxy/kubeconfig.conf for kube-proxy config ;  
 
 
 
