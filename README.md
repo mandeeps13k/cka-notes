@@ -150,6 +150,8 @@ Kube-controller-manager -> \
 check running static pods in -n kube-system namespace ; \
 cgeck kube-controller-manager static pod config in /etc/kubernetes/manifests/kube-controller-manager.yaml
 
+For other errors related to file or Directory Not found , also check volume Mounts , hostPath on the static Pods as the certificates are mounted as volume
+
 
 
 
