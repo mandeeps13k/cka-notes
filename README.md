@@ -132,6 +132,10 @@ Services IP Defined in /etc/kubernetes/manifests/kube-apiserver.yaml (--service-
 kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-proxy runs as daemonsets
 ## Troubleshooting
 
+Deployment Logs -> \
+k logs deployments/collect-data -c nginx (container nginx only logs)
+If multiple container try to run on same port in a Pod, first will success, other will fail, check logs. 
+
 Kubectl Broken -> \
 check kube-apiserver Pod logs -> /var/log/pods/kube-system_kube-apiserver-controlplane_a94588ab9b1141fe60c1fb951b60579a/kube-apiserver ; \
 check running pods -> crictl ps ; \
