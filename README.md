@@ -174,6 +174,7 @@ cat /var/log/syslog | grep kube-apiserver ;
 ## Ingress
 
 For Ingress creation and related Issues, always check Ingress Controller (service) for ports config \
+Also check ingress class with k get ingressclass ; \
 k create ingress --help ;
 
 
