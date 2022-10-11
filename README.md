@@ -134,7 +134,9 @@ kube-proxy Proxy type -> kubectl logs kube-proxy-4ttzb -n kube-system ; kube-pro
 Kubectl Broken -> \
 check kube-apiserver Pod logs -> /var/log/pods/kube-system_kube-apiserver-controlplane_a94588ab9b1141fe60c1fb951b60579a/kube-apiserver ; \
 check running pods -> crictl ps ; \
-crictl logs container-id ;
+crictl logs container-id ; \
+or docker ps ; docker logs ; (when docker is configured)
+
 
 Kubelet -> \
 kubelet config on nodes -> check kubelet pod or check kubelet service on node -> service kubelet status ; cat /var/lib/kubelet/config.yaml
