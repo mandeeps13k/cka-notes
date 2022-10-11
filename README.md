@@ -163,7 +163,8 @@ cgeck kube-controller-manager static pod config in /etc/kubernetes/manifests/kub
 
 Other errors-> \
 For other errors related to file or Directory Not found , also check volume Mounts , hostPath on the static Pods as the certificates are mounted as volume
-check journalctl | grep apiserver
+check journalctl | grep apiserver \
+cat /var/log/syslog | grep kube-apiserver ;
 
 
 
