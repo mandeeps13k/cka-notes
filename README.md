@@ -136,6 +136,7 @@ check kube-apiserver Pod logs -> /var/log/pods/kube-system_kube-apiserver-contro
 check running pods -> crictl ps ; \
 crictl logs container-id ; \
 or docker ps ; docker logs ; (when docker is configured)
+for kube-apiserver -> logs -> also check -> journalctl | grep apiserver ; tail -f /var/log/syslog | grep apiserver ; /var/log/pods ; crictl logs
 
 
 Kubelet -> \
@@ -159,7 +160,10 @@ Kube-controller-manager -> \
 check running static pods in -n kube-system namespace ; \
 cgeck kube-controller-manager static pod config in /etc/kubernetes/manifests/kube-controller-manager.yaml
 
+Other errors-> \
 For other errors related to file or Directory Not found , also check volume Mounts , hostPath on the static Pods as the certificates are mounted as volume
+check journalctl | grep apiserver
+
 
 
 
