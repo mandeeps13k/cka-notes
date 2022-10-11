@@ -74,6 +74,7 @@ kubectl create configmap -n kube-system my-scheduler-config --from-file=/root/my
 kubectl logs -f pod-name container-name\
 kubectl top pod\
 kubectl top node\
+k logs deployments/collect-data -c nginx (container nginx only logs)
 ## Rollout & Rollback
 kubectl rollout status deployment/myapp-deployment\
 kubectl rollout history deployment/myapp-deployment\
