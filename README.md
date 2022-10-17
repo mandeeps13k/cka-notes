@@ -188,7 +188,7 @@ k create ingress --help ;
 
 ## Important Points to Remember 
 
-- When creating Ingress, always check Ingress Class as `ingressClassName` is required while creating Ingress
+- When creating Ingress, always check Ingress Class as `ingressClassName` is required while creating Ingress, also check Ingress Controller
 
 
 
