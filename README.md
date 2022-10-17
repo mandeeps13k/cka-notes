@@ -189,6 +189,7 @@ k create ingress --help ;
 ## Important Points to Remember 
 
 - When creating Ingress, always check Ingress Class as `ingressClassName` is required while creating Ingress, also check Ingress Controller
+- When performing backUp and restore of ETCD, make sure the volume Mounts are correctly updated in the ETCD Static Pod Config `/etc/kubernetes/manifests/etcd.yaml`
 
 
 
