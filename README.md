@@ -191,6 +191,7 @@ k create ingress --help ;
 - When creating Ingress, always check Ingress Class as `ingressClassName` is required while creating Ingress, also check Ingress Controller
 - When performing backUp and restore of ETCD, make sure the volumeMounts and Paths are correctly updated in the ETCD Static Pod Config `/etc/kubernetes/manifests/etcd.yaml` . 
 - Remember that `--data-dir` is the Path where the snapshot will be ReStored, and this path should be updated in /etc/kubernetes/manifests/etcd.yaml , in the command path as well as the `volumeMount` path.
+- Use `k expose deploy` command to create service for a deployment - it applies right selectors automatically.
 
 
 
