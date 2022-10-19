@@ -193,6 +193,7 @@ k create ingress --help ;
 - Remember that `--data-dir` is the Path where the snapshot will be ReStored, and this path should be updated in /etc/kubernetes/manifests/etcd.yaml , in the command path as well as the `volumeMount` path.
 - Use `k expose deploy` command to create service for a deployment - it applies right selectors automatically.
 - Always check selectors in services
+- The Storage Class that makes use of VolumeBindingMode set to WaitForFirstConsumer. This will delay the binding and provisioning of a PersistentVolume until a Pod using the PersistentVolumeClaim is created.
 
 
 
