@@ -195,6 +195,7 @@ k create ingress --help ;
 - Use `k expose deploy` command to create service for a deployment - it applies right selectors automatically.
 - Always check selectors in services
 - The Storage Class that makes use of VolumeBindingMode set to WaitForFirstConsumer. This will delay the binding and provisioning of a PersistentVolume until a Pod using the PersistentVolumeClaim is created.
+- While creating network policy, only specify `ingress` or `egress` sections when making changes. Do not use empty array [ ] in these sections.
 
 
 
