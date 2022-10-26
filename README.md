@@ -166,6 +166,8 @@ kube-proxy config as daemon set ; kubectl get ds -n kube-system; kube-proxy run 
 check kubectl get cm -n kube-system ; kube-proxy runs in kube-system -> check kubectl get ds -n kube-system ;  \
 check /var/lib/kube-proxy/kubeconfig.conf for kube-proxy config ;  
 
+Always check the ConfigMap by using `k describe cm` to check the path of the config file which should be same and consistent across the ConfigMap and DaemonSet of kube-proxy `k get ds -n kube-proxy` 
+
 Control-Plane Failure -> \
 check running pods in -n kube-system namespace ; \
 check kube-scheduler static pod config in /etc/kubernetes/manifests/kube-scheduler.yaml 
