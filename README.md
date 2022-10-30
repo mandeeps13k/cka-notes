@@ -199,6 +199,7 @@ k create ingress --help ;
 - The Storage Class that makes use of VolumeBindingMode set to WaitForFirstConsumer. This will delay the binding and provisioning of a PersistentVolume until a Pod using the PersistentVolumeClaim is created.
 - While creating network policy, only specify `ingress` or `egress` sections when making changes. Do not use empty array [ ] in these sections.
 - For output related questions, use command `k get pod -o json | jq -c 'paths'` to obtain all json paths and then `grep` for required paths.
+- Always check NameSpace labels using `--show-labels` before using NameSpace as selectors.
 
 
 
