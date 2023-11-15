@@ -89,6 +89,7 @@ kubectl get all -o wide \
 kubectl cordon node01 \
 kubectl drain node01 
 ## BackUp , ETCD
+ETCD stores information in key,value stores.
 kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml \
 etcdctl snapshot save snapshot.db --cacert --cert --endpoint --key \
 ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 \
